@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>BoomratkinGene</defName>
+		<label>Boomratkin Gene</label>
+		<displayPriorityInXenotype>850</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+	<GeneCategoryDef>
+		<defName>BoomratkinEarsGene</defName>
+		<label>Boomratkin Ears Gene</label>
+		<displayPriorityInXenotype>851</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+	<GeneCategoryDef>
+		<defName>BoomratkinTailGene</defName>
+		<label>Boomratkin Tail Gene</label>
+		<displayPriorityInXenotype>852</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+    <GeneCategoryDef>
+		<defName>BoomratkinBodyGene</defName>
+		<label>Boomratkin Body Gene</label>
+		<displayPriorityInXenotype>853</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+    <GeneDef Name="BRKGeneEarsBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>BoomratkinEarsGene</displayCategory>
+		<displayOrderInCategory>0</displayOrderInCategory>
+		<iconColor>(0.85, 0.85, 0.85)</iconColor>
+		<randomChosen>true</randomChosen>
+        
+		<exclusionTags>
+			<li>BoomratkinEarsGene</li>
+			<li>Ears</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="BRKGeneEarsBase">
+		<defName>RK_Ears</defName>
+		<displayOrderInCategory>1</displayOrderInCategory>
+        <iconColor>(1, 0.92, 0.65)</iconColor>
+		<biostatMet>0</biostatMet>
+		<label>Ratkin ears</label>
+		<description>The Ratkin with this gene has big rat ears</description>
+		<iconPath>Things/Bodies/Ratkin/RK_Ear_east</iconPath>
+	</GeneDef>
+
+	<GeneDef ParentName="BRKGeneEarsBase">
+		<defName>BRK_Ears</defName>
+		<displayOrderInCategory>1</displayOrderInCategory>
+        <iconColor>(1, 0.92, 0.65)</iconColor>
+		<biostatMet>0</biostatMet>
+		<label>Boomrat ears</label>
+		<description>The Ratkin with this gene has Boomrat ears</description>
+		<iconPath>Things/Bodies/BRK_Base/BRK_Ear_east</iconPath>
+	</GeneDef>
+
+
+
+	<GeneDef Name="BRKGeneTailBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>BoomratkinTailGene</displayCategory>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<iconColor>(0.85, 0.85, 0.85)</iconColor>
+		<randomChosen>true</randomChosen>
+
+		<exclusionTags>
+			<li>BoomratkinTailGene</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="BRKGeneTailBase">
+		<defName>RK_Tail</defName>
+		<displayOrderInCategory>0</displayOrderInCategory>
+        <iconColor>(1, 0.92, 0.65)</iconColor>
+		<biostatMet>1</biostatMet>
+		<label>Rat tail</label>
+		<description>The Ratkin with this gene has a common rat tail</description>
+		<iconPath>Things/Bodies/BRK_Base/BRK_Tail_east</iconPath>
+	</GeneDef>
+
+	<!-- <GeneDef ParentName="BRKGeneTailBase">
+		<defName>BRK_Tail</defName>
+		<displayOrderInCategory>0</displayOrderInCategory>
+        <iconColor>(1, 0.92, 0.65)</iconColor>
+		<biostatMet>1</biostatMet>
+		<label>Boomrat tail</label>
+		<description>The Ratkin with this gene has a yellowish Boomrat tail</description>
+		<iconPath>Things/Bodies/BRK_Base/BRK_Tail_east</iconPath>
+	</GeneDef> -->
+
+
+    <GeneDef Name="BRKGeneBodyBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>BoomratkinGene</displayCategory>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<iconColor>(0.85, 0.85, 0.85)</iconColor>
+		<randomChosen>true</randomChosen>
+
+		<exclusionTags>
+			<li>BoomratkinBodyGene</li>
+		</exclusionTags>
+	</GeneDef>
+	
+</Defs>

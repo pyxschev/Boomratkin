@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <HediffDef Name="BRKGene_GiveHediffs" Abstract="true">
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <duplicationAllowed>false</duplicationAllowed>
+        <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    </HediffDef>
+
+    <HediffDef ParentName="BRKGene_GiveHediffs">
+        <defName>ChemfuelGeneration</defName>
+        <label>Fuel Sack</label>
+        <defaultLabelColor>(0.6, 1.0, 0.7)</defaultLabelColor>
+        <description>Stores chemfuel.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <alwaysShowSeverity>true</alwaysShowSeverity>
+        <comps>
+            <li Class="Boomratkin.HediffCompProperties_ExplodeOnDeath">
+              <explodeRadius>7.0</explodeRadius>
+              <explodeDamage>50</explodeDamage>
+              <explodePenetration>50</explodePenetration>
+              <fireChance>0.5</fireChance>
+            </li>
+        </comps>
+        
+        
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>BRKTech</defName>
+		<label>Boomratkin tech</label>
+	</ResearchTabDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_start</defName>
+		<label>Boomratkin</label>
+		<description>Start to realize your race.</description>
+		<tab>BRKTech</tab>
+		<baseCost>300</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>BRK_culture</defName>
+		<label>Boomratkin culture</label>
+		<description>Gather folk tales of the boomratkin.</description>
+		<tab>BRKTech</tab>
+		<baseCost>2400</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>BRK_start</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>6</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_religion</defName>
+		<label>Boomratkin religion</label>
+		<description>Form firm religion around the ultimate god.</description>
+		<tab>BRKTech</tab>
+		<baseCost>2700</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_culture</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>6</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>BRK_reform</defName>
+		<label>Religion reformation</label>
+		<description>Handle the impact of the new creations.</description>
+		<tab>BRKTech</tab>
+		<baseCost>4000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>BRK_religion</li>
+			<li>PlasmaBRK</li>
+		</prerequisites> 
+		<researchViewX>7</researchViewX>
+		<researchViewY>6</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>BRK_chosen_one</defName>
+		<label>The Chosen One</label>
+		<description>A mysterious plasma boomratkin that only exists in the oldest tale.</description>
+		<tab>BRKTech</tab>
+		<baseCost>4000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>BRK_reform</li>
+		</prerequisites>
+		<researchViewX>8</researchViewX>
+		<researchViewY>6</researchViewY>
+	</ResearchProjectDef>
+		
+	<ResearchProjectDef>
+		<defName>BRK_ICEngine</defName>
+		<label>Small combustion engine</label>
+		<description>A makeshift pistol engine powers on chemfuel. Doesn't produce much power.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_start</li>
+			<li>Smithing</li>
+		</prerequisites> 
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_propeller</defName>
+		<label>Simple propeller</label>
+		<description>Use the power of fuel to gain instant force.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_ICEngine</li>
+		</prerequisites> 
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_doomsday</defName>
+		<label>Doomsday weapons</label>
+		<description>Ruin everything.</description>
+		<tab>BRKTech</tab>
+		<baseCost>3000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_propeller</li>
+			<li>HeavyTurrets</li>
+			<li>BRK_HEFuel</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_fertrefine</defName>
+		<label>Fertilizer refinery</label>
+		<description>Produce neutroamine from fertilizer.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DrugProduction</li>
+			<li>BRK_start</li>
+		</prerequisites> 
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_fluo</defName>
+		<label>Fluorescent material</label>
+		<description>Light up without electricity.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_fertrefine</li>
+		</prerequisites> 
+		<researchViewX>2</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_HEFuel</defName>
+		<label>HyperEnergy Fuel sythesis</label>
+		<description>Produce advanced fuel.</description>
+		<tab>BRKTech</tab>
+		<baseCost>3200</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>BRK_fertrefine</li>
+			<li>BiofuelRefining</li>
+			<li>HighMechtech</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>BRK_ProsthBase</defName>
+		<label>Basic Boomratkin Prosthetics</label>
+		<description>Basic Boomratkin Prosthetics.</description>
+		<tab>BRKTech</tab>
+		<baseCost>800</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>BRK_start</li>
+			<li>Prosthetics</li>
+		</prerequisites> 
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_ProsthStandard</defName>
+		<label>Standard Boomratkin Prosthetics</label>
+		<description>Basic Boomratkin Prosthetics.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_propeller</li>
+			<li>BRK_ProsthBase</li>
+		</prerequisites> 
+		<researchViewX>3</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_ProsthAdvanced</defName>
+		<label>Advanced Boomratkin Prosthetics</label>
+		<description>Advanced Boomratkin Prosthetics.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BRK_ProsthStandard</li>
+		</prerequisites> 
+		<researchViewX>4</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_ProsthHE</defName>
+		<label>Hyper Energy Prosthetics</label>
+		<description>HE Boomratkin Prosthetics.</description>
+		<tab>BRKTech</tab>
+		<baseCost>2600</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>BRK_ProsthAdvanced</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_ProsthPlasma</defName>
+		<label>Plasma Boomratkin Prosthetics</label>
+		<description>Plasma Boomratkin Prosthetics.</description>
+		<tab>BRKTech</tab>
+		<baseCost>2000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>BRK_ProsthHE</li>
+			<li>PlasmaBRK</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>7</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_FastGrowthVats</defName>
+		<label>Fast Growth Vats</label>
+		<description>fast vats.</description>
+		<tab>BRKTech</tab>
+		<baseCost>2400</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>GrowthVats</li>
+			<li>Biosculpting</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_Clone</defName>
+		<label>Cloning</label>
+		<description>cloning.</description>
+		<tab>BRKTech</tab>
+		<baseCost>3200</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>BRK_FastGrowthVats</li>
+			<li>BRK_ReconstructXenogerm</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>6</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_Suppressor</defName>
+		<label>Energy Suppressor</label>
+		<description>Plasma Boomratkin Suppressor.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>UltraMechtech</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techprintCount>1</techprintCount>
+    	<techprintCommonality>3</techprintCommonality>
+    	<techprintMarketValue>3000</techprintMarketValue>
+    	<heldByFactionCategoryTags>
+      		<li>Empire</li>
+    	</heldByFactionCategoryTags>
+		<researchViewX>5</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_PlasmaGland</defName>
+		<label>Plasma Gland</label>
+		<description>Plasma Boomratkin main.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Bionics</li>
+			<li>ChargedShot</li>
+			<li>BRK_start</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techprintCount>1</techprintCount>
+    	<techprintCommonality>3</techprintCommonality>
+    	<techprintMarketValue>3000</techprintMarketValue>
+    	<heldByFactionCategoryTags>
+      		<li>Empire</li>
+    	</heldByFactionCategoryTags>
+		<researchViewX>5</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BRK_ReconstructXenogerm</defName>
+		<label>Reconstructive Xenogerm</label>
+		<description>used for making Plasma Boomratkin.</description>
+		<tab>BRKTech</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>UltraMechtech</li>
+			<li>Bioregeneration</li>
+			<li>Archogenetics</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<techprintCount>1</techprintCount>
+    	<techprintCommonality>3</techprintCommonality>
+    	<techprintMarketValue>3000</techprintMarketValue>
+    	<heldByFactionCategoryTags>
+      		<li>Empire</li>
+    	</heldByFactionCategoryTags>
+		<researchViewX>5</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>PlasmaBRK</defName>
+		<label>Plasma Boomratkin</label>
+		<description>Plasma Boomratkin.</description>
+		<tab>BRKTech</tab>
+		<baseCost>6400</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>BRK_ReconstructXenogerm</li>
+			<li>BRK_PlasmaGland</li>
+			<li>BRK_Suppressor</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>6</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>RatbiesBRK</defName>
+		<label>Ratbies Boomratkin</label>
+		<description>Ratbies Boomratkin.</description>
+		<tab>BRKTech</tab>
+		<baseCost>4800</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>PlasmaBRK</li>
+		</prerequisites> 
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>7</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>DeepSpaceBroadcast</defName>
+		<label>Deep-Space broadcast</label>
+		<description>Call that chosen one. fight the world.</description>
+		<tab>BRKTech</tab>
+		<baseCost>10000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<prerequisites>
+			<li>BRK_chosen_one</li>
+			<li>PlasmaBRK</li>
+			<li>ShipBasics</li>
+		</prerequisites>
+		<researchViewX>9</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectTagDef>
+		<defName>BRKStart</defName>
+	</ResearchProjectTagDef>
+</Defs>

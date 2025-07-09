@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Boomratkin_Base</defName>
+    <label>Boomratkin</label>
+    <description>Born in the secret labs of the Ratkin Kindom, Boomratkins were treated like oil-crops. 
+      Although gained freedom thanks to the fall of the kingdom several hundreds years ago, they still suffered from agony and major discrimination. 
+      Ratkins take their ugly appearance as a sign of omen, and indeed, they do brought disasters. 
+      Nowadays, a major population of existing Boomratkins are in partisan troops, living on raids, suicidical terrorism and hatred toward their creators.</description>
+    <descriptionShort>Intractable laboratory creations. Produce chemfuel and explode on death.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Boomratkin_Base</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>NamerPersonDirtmole_Male</nameMaker>
+    <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <li>BRKGene_ChemfuelGland</li>
+      <li>Hair_SandyBlonde</li>
+      <li>Libido_High</li>
+      <li>Nearsighted</li>
+      <li>PsychicAbility_Dull</li>
+      <li>NakedSpeed</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudePoor_Crafting</li>
+      <li>AptitudePoor_Artistic</li>
+      <li>AptitudePoor_Plants</li>
+      <li>Learning_Fast</li>
+      <li>Superclotting</li>
+      <li>StrongStomach</li>
+      <li>Fertile</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>Boomratkin_HE</defName>
+    <label>High-energy Boomratkin</label>
+    <description>Born in the secret labs of the Ratkin Kindom, Boomratkins were treated like oil-crops. Although gained freedom thanks to the fall of the kingdom several hundreds years ago, they still suffered from agony and major discrimination. 
+      Ratkins take their ugly appearance as a sign of omen, and indeed, they do brought disasters. Nowadays, a major population of existing Boomratkins are in partisan troops, living on raids, suicidical terrorism and hatred toward ordinary Ratkins.</description>
+    <descriptionShort>Intractable laboratory creations. Produce chemfuel and explode on death.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Boomratkin_HEF</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>NamerPersonDirtmole_Male</nameMaker>
+    <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <li>BRKGene_HEfuelGland</li>
+      <li>Hair_SandyBlonde</li>
+      <li>Libido_High</li>
+      <li>Nearsighted</li>
+      <li>FoamSpray</li>
+      <li>PsychicAbility_Dull</li>
+      <li>NakedSpeed</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudePoor_Crafting</li>
+      <li>AptitudePoor_Artistic</li>
+      <li>AptitudePoor_Plants</li>
+      <li>Learning_Fast</li>
+      <li>Superclotting</li>
+      <li>StrongStomach</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>Boomratkin_Fert</defName>
+    <label>Fertilizer Boomratkin</label>
+    <description>During the long vagrancy, some of the Boomratkins adapted themselves to cater human farms needs, having glands that produce chemical fertilizers. 
+      They eat less, and the explosions on their deaths are less lethal. 
+      Although considered as cowards for their history, they are still welcomed by the Boomratkin patrisans for their ability to produce food.</description>
+    <descriptionShort>Intractable laboratory creations. Produce chemfuel and explode on death.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Boomratkin_Fertilizer</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>NamerPersonDirtmole_Male</nameMaker>
+    <nameMakerFemale>NamerPersonDirtmole_Female</nameMakerFemale>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+      <li>BRKGene_FertilizerGland</li>
+      <li>Hair_SandyBlonde</li>
+      <li>Libido_High</li>
+      <li>Nearsighted</li>
+      <li>FoamSpray</li>
+      <li>PsychicAbility_Dull</li>
+      <li>NakedSpeed</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudePoor_Crafting</li>
+      <li>AptitudePoor_Artistic</li>
+      <li>AptitudePoor_Plants</li>
+      <li>Learning_Fast</li>
+      <li>Superclotting</li>
+      <li>StrongStomach</li>
+      <li>Fertile</li>
+    </genes>
+  </XenotypeDef>
+
+/</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+    <ThoughtDef>
+        <defName>FuelSackRemoved</defName>
+        <stackLimit>1</stackLimit>
+        <durationDays>30</durationDays>
+        <stages>
+        <li>
+            <label>fuel sack removed</label>
+            <description>My fuel sack was excised. I am no longer a boomratkin, but a pathetic creature that betrayed its belief. Who am I now? I feel those wounds, and it hurts...</description>
+            <baseMoodEffect>-15</baseMoodEffect>
+        </li>
+        </stages>
+    </ThoughtDef>
+
+      
+
+</Defs>

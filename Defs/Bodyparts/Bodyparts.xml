@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+	<BodyPartTagDef>
+		<defName>FuelGenerationSource</defName>
+	</BodyPartTagDef>
+
+	<BodyPartDef>
+		<defName>BRK_FuelSack</defName>
+		<label>Fuel Sack</label>
+		<hitPoints>30</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<beautyRelated>true</beautyRelated>		
+		<tags>
+			<li>FuelGenerationSource</li>
+		</tags>
+	</BodyPartDef>
+
+</Defs>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <GeneCategoryDef>
+		<defName>BRKGlandGene</defName>
+		<label>Boomratkin Gene</label>
+		<displayPriorityInXenotype>800</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+    
+    <GeneDef>
+        <defName>BRKGene_ChemfuelGland</defName>
+        <label>Chemfuel Gland</label>
+        <displayCategory>BRKGlandGene</displayCategory>
+        <description>Carriers of this gene have glands that generate chemfuel overtime and store them in the fuel sacks on their skin.</description>
+        <customEffectDescriptions>
+            <li>Generate chemfuel overtime. Explode on death.</li>
+        </customEffectDescriptions>
+        <exclusionTags><li>BRKGlandGene</li></exclusionTags>
+        <geneClass>Boomratkin.BRKGene_ChemfuelGland</geneClass>
+        <resourceGizmoType>Boomratkin.GeneGizmo_ResourceFuel</resourceGizmoType>
+        <resourceLabel>fuel</resourceLabel>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+        <displayOrderInCategory>1001</displayOrderInCategory>
+        <iconPath>UI/Icons/Genes/BRKGene_ChemfuelGland</iconPath>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <painFactor>0.5</painFactor>
+        <suppressedTraits>
+            <li>
+              <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <statOffsets>
+            <PawnBeauty>-0.5</PawnBeauty>
+            <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+            <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>1.2</InjuryHealingFactor>
+            <LifespanFactor>0.6</LifespanFactor>
+            <CancerRate>5</CancerRate>
+            <Flammability>2</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>3</Flame>
+            <Burn>3</Burn>
+            <ElectricalBurn>2</ElectricalBurn>
+            <Bomb>2</Bomb>
+            <Beam>2</Beam>
+            <Stab>1.5</Stab>
+            <Arrow>1.3</Arrow>
+            <Bullet>1.1</Bullet>
+            <AcidBurn>0.1</AcidBurn>
+        </damageFactors>
+        <biostatMet>-5</biostatMet>
+        <biostatCpx>4</biostatCpx>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>BRKGene_HEfuelGland</defName>
+        <label>HyperFuel Gland</label>
+        <description>Carriers of this gene have glands that generate chemfuel overtime and store them in the fuel sacks on their skin.</description>
+        <displayCategory>BRKGlandGene</displayCategory>
+        <customEffectDescriptions>
+            <li>Generate chemfuel overtime. Explode on death.</li>
+        </customEffectDescriptions>
+        <exclusionTags><li>BRKGlandGene</li></exclusionTags>
+        <geneClass>Boomratkin.BRKGene_HEfuelGland</geneClass>
+        <displayOrderInCategory>1000</displayOrderInCategory>
+        <iconPath>UI/Icons/Genes/BRKGene_HEfuelGland</iconPath>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <painFactor>0.5</painFactor>
+        <suppressedTraits>
+            <li>
+              <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <statOffsets>
+            <PawnBeauty>-0.5</PawnBeauty>
+            <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+            <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>1.2</InjuryHealingFactor>
+            <LifespanFactor>0.6</LifespanFactor>
+            <CancerRate>5</CancerRate>
+            <Flammability>2</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>3</Flame>
+            <Burn>3</Burn>
+            <ElectricalBurn>2</ElectricalBurn>
+            <Bomb>2</Bomb>
+            <Beam>2</Beam>
+            <Stab>1.5</Stab>
+            <Arrow>1.3</Arrow>
+            <Bullet>1.1</Bullet>
+            <AcidBurn>0.1</AcidBurn>
+        </damageFactors>
+        <biostatMet>-5</biostatMet>
+        <biostatCpx>4</biostatCpx>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>BRKGene_FertilizerGland</defName>
+        <label>Fertilizer Gland</label>
+        <description>Carriers of this gene have glands that generate chemfuel overtime and store them in the fuel sacks on their skin.</description>
+        <displayCategory>BRKGlandGene</displayCategory>
+        <customEffectDescriptions>
+            <li>Generate Fertilizer overtime. Explode on death.</li>
+        </customEffectDescriptions>
+        <exclusionTags><li>BRKGlandGene</li></exclusionTags>
+        <geneClass>Boomratkin.BRKGene_FertilizerGland</geneClass>
+        <displayOrderInCategory>1000</displayOrderInCategory>
+        <iconPath>UI/Icons/Genes/BRKGene_FertilizerGland</iconPath>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <painFactor>0.5</painFactor>
+        <suppressedTraits>
+            <li>
+              <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <statOffsets>
+            <PawnBeauty>-0.5</PawnBeauty>
+            <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+            <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+            <InjuryHealingFactor>1.2</InjuryHealingFactor>
+            <LifespanFactor>0.6</LifespanFactor>
+            <CancerRate>5</CancerRate>
+            <Flammability>2</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>3</Flame>
+            <Burn>3</Burn>
+            <ElectricalBurn>2</ElectricalBurn>
+            <Bomb>2</Bomb>
+            <Beam>2</Beam>
+            <Stab>1.5</Stab>
+            <Arrow>1.3</Arrow>
+            <Bullet>1.1</Bullet>
+            <AcidBurn>0.1</AcidBurn>
+        </damageFactors>
+        <biostatMet>-5</biostatMet>
+        <biostatCpx>4</biostatCpx>
+    </GeneDef>
+</Defs>

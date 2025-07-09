@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/generalSettings/alienPartGenerator/bodyAddons
+    </xpath>
+    <value>
+      <li>
+        <drawSize>1</drawSize>
+        <path>Things/Bodies/BRK_Common/ChemFuelSack_Thin</path>
+        <inFrontOfBody>true</inFrontOfBody>
+        <defaultOffset>Head</defaultOffset>
+        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							
+        <!-- <conditions ConditionOperator="Or">
+          <Gene><gene>BRKGene_ChemfuelGland</gene></Gene>
+          <Gene><gene>BRKGene_HEfuelGland</gene></Gene>
+          <Gene><gene>BRKGene_FertilizerGland</gene></Gene>
+        </conditions>  -->
+        <conditions>
+          <BodyPart>
+            <bodyPart>BRK_FuelSack</bodyPart>
+            <bodyPartLabel>Fuel Sack</bodyPartLabel>
+            <drawWithoutPart>false</drawWithoutPart>
+          </BodyPart>
+          <Posture>
+            <drawnStanding>true</drawnStanding>
+            <drawnLaying>true</drawnLaying>
+            <drawnInBed>false</drawnInBed>
+          </Posture>
+          <RotStage>Fresh</RotStage>
+        </conditions>
+        <offsets>
+          <south><bodyTypes><Thin>(0,0)</Thin><Baby>(0,0)</Baby><Child>(0,0)</Child></bodyTypes></south>
+          <north><bodyTypes><Thin>(0,0)</Thin><Baby>(0,0)</Baby><Child>(0,0)</Child></bodyTypes></north>
+          <east> <bodyTypes><Thin>(0,0)</Thin><Baby>(0,0)</Baby><Child>(0,0)</Child></bodyTypes></east>
+          <west> <bodyTypes><Thin>(0,0)</Thin><Baby>(0,0)</Baby><Child>(0,0)</Child></bodyTypes></west>
+        </offsets>
+        <extendedGraphics>
+          <Age For="HumanlikeAdult">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland"><path>Things/Bodies/BRK_Common/ChemFuelSack_Thin</path></Gene>
+              <Gene For="BRKGene_HEfuelGland"><path>Things/Bodies/BRK_HEF/HEFuelSack_Thin</path></Gene>
+              <Gene For="BRKGene_FertilizerGland"><path>Things/Bodies/BRK_Fert/FertilizerSack_Thin</path></Gene>
+            </extendedGraphics>
+          </Age>
+  
+          <Age For="HumanlikeTeenager">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland"><path>Things/Bodies/BRK_Common/ChemFuelSack_Thin</path></Gene>
+              <Gene For="BRKGene_HEfuelGland"><path>Things/Bodies/BRK_HEF/HEFuelSack_Thin</path></Gene>
+              <Gene For="BRKGene_FertilizerGland"><path>Things/Bodies/BRK_Fert/FertilizerSack_Thin</path></Gene>
+            </extendedGraphics>
+          </Age>
+  
+          <Age For="HumanlikePreTeenager" MayRequire="Ludeon.RimWorld.Biotech">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland"><path>Things/Bodies/BRK_Common/ChemFuelSack_Child</path></Gene>
+              <Gene For="BRKGene_HEfuelGland"><path>Things/Bodies/BRK_HEF/HEFuelSack_Child</path></Gene>
+              <Gene For="BRKGene_FertilizerGland"><path>Things/Bodies/BRK_Fert/FertilizerSack_Child</path></Gene>
+            </extendedGraphics>
+          </Age>
+  
+          <Age For="HumanlikeChild">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland"><path>Things/Bodies/BRK_Common/ChemFuelSack_Child</path></Gene>
+              <Gene For="BRKGene_HEfuelGland"><path>Things/Bodies/BRK_HEF/HEFuelSack_Child</path></Gene>
+              <Gene For="BRKGene_FertilizerGland"><path>Things/Bodies/BRK_Fert/FertilizerSack_Child</path></Gene>
+            </extendedGraphics>
+          </Age>
+  
+          <Age For="HumanlikeBaby">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland"><path>Things/Bodies/BRK_Common/ChemFuelSack_Baby</path></Gene>
+              <Gene For="BRKGene_HEfuelGland"><path>Things/Bodies/BRK_HEF/HEFuelSack_Baby</path></Gene>
+              <Gene For="BRKGene_FertilizerGland"><path>Things/Bodies/BRK_Fert/FertilizerSack_Baby</path></Gene>
+            </extendedGraphics>
+          </Age>
+        </extendedGraphics>
+        <!-- <extendedGraphics>
+          <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Common/ChemFuelSack</Gene>
+          <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_HEF/HEFuelSack</Gene>
+          <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Fert/FertilizerSack</Gene>
+        </extendedGraphics> -->
+      </li>
+    </value>
+  </Operation>
+
+  
+  <!-- <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/generalSettings/alienPartGenerator/bodyAddons
+      /li[path="Body/RK_EarLeft"]
+    </xpath>
+    <value>
+      <extendedGraphics>
+        <Gene For="RK_Ears"><path>Things/Bodies/Ratkin/RK_EarLeft</path></Gene>
+        <Gene For="BRK_Ears"><path>Things/Bodies/BRK_Base/BRK_EarLeft</path></Gene>
+      </extendedGraphics>
+    </value>
+  </Operation>
+
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/generalSettings/alienPartGenerator/bodyAddons
+      /li[path="Body/RK_EarRight"]
+    </xpath>
+    <value>
+      <extendedGraphics>
+        <Gene For="RK_Ears"><path>Things/Bodies/Ratkin/RK_EarRight</path></Gene>
+        <Gene For="BRK_Ears"><path>Things/Bodies/BRK_Base/BRK_EarRight</path></Gene>
+      </extendedGraphics>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/generalSettings/alienPartGenerator/bodyAddons
+      /li[path="Body/RK_EarRight"]
+    </xpath>
+    <value>
+      <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+    </value>
+  </Operation> -->
+
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/generalSettings/alienPartGenerator/bodyAddons
+      /li[path="Body/RK_Tail"]
+    </xpath>
+    <value>
+      <extendedGraphics>
+        <Gene For="RK_Tail"><path>Things/Bodies/Ratkin/RK_Tail</path></Gene>
+        <Gene For="BRK_Tail"><path>Things/Bodies/BRK_Base/BRK_Tail</path></Gene>
+      </extendedGraphics>
+    </value>
+  </Operation>
+
+  
+  <!-- <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]/alienRace/graphicPaths/body
+    </xpath>
+    <value>
+      <body>
+        <path>Things/Bodies/Ratkin/BodiesNaked_Thin</path>
+        <ageGraphics>
+          <HumanlikeAdult>Things/Bodies/Ratkin/BodiesNaked_Thin</HumanlikeAdult>
+          <HumanlikeTeenager>Things/Bodies/Ratkin/BodiesNaked_Thin</HumanlikeTeenager>
+          <HumanlikePreTeenager MayRequire="Ludeon.RimWorld.Biotech">Things/Bodies/Ratkin/BodiesNaked_Child</HumanlikePreTeenager>
+          <HumanlikeChild>Things/Bodies/Ratkin/BodiesNaked_Child</HumanlikeChild>
+          <HumanlikeBaby>Things/Bodies/Ratkin/BodiesNaked_Baby</HumanlikeBaby>
+        </ageGraphics>
+        
+      </body>
+    </value>
+  </Operation> -->
+
+  
+  <!-- <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Ratkin"]
+      /alienRace/graphicPaths/body
+    </xpath>
+    <value>
+      <body>
+      
+        <path>Things/Bodies/Ratkin/BodiesNaked_Thin</path>
+  
+        
+        <ageGraphics>
+          <HumanlikeAdult>Things/Bodies/Ratkin/BodiesNaked_Thin</HumanlikeAdult>
+          <HumanlikeTeenager>Things/Bodies/Ratkin/BodiesNaked_Thin</HumanlikeTeenager>
+          <HumanlikePreTeenager MayRequire="Ludeon.RimWorld.Biotech">Things/Bodies/Ratkin/BodiesNaked_Child</HumanlikePreTeenager>
+          <HumanlikeChild>Things/Bodies/Ratkin/BodiesNaked_Child</HumanlikeChild>
+          <HumanlikeBaby>Things/Bodies/Ratkin/BodiesNaked_Baby</HumanlikeBaby>
+        </ageGraphics>
+  
+        
+        <extendedGraphics>
+          
+          <Age For="HumanlikeAdult">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+              <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+              <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+            </extendedGraphics>
+          </Age>
+  
+          
+          <Age For="HumanlikeTeenager">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+              <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+              <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Base/BodiesNaked_Thin</Gene>
+            </extendedGraphics>
+          </Age>
+  
+          
+          <Age For="HumanlikePreTeenager" MayRequire="Ludeon.RimWorld.Biotech">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+              <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+              <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+            </extendedGraphics>
+          </Age>
+  
+          
+          <Age For="HumanlikeChild">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+              <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+              <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Base/BodiesNaked_Child</Gene>
+            </extendedGraphics>
+          </Age>
+  
+          
+          <Age For="HumanlikeBaby">
+            <extendedGraphics ConditionOperator="Or">
+              <Gene For="BRKGene_ChemfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Baby</Gene>
+              <Gene For="BRKGene_HEfuelGland">Things/Bodies/BRK_Base/BodiesNaked_Baby</Gene>
+              <Gene For="BRKGene_FertilizerGland">Things/Bodies/BRK_Base/BodiesNaked_Baby</Gene>
+            </extendedGraphics>
+          </Age>
+        </extendedGraphics>
+      </body>
+    </value>
+  </Operation> -->
+  
+</Patch>

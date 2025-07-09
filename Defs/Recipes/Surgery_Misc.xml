@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="SurgeryFlesh">
+		<defName>BRK_RemoveFuelSack</defName>
+		<label>Remove Fuel Sack</label>
+		<description>Remove the fuel sack to disable fuel generation and explosion of this Boomratkin. However, this would not end their pain, and may leave with terrible scars.</description>
+		<!-- <workerClass>Boomratkin.Recipe_RemoveFuelSack</workerClass> -->
+		<jobString>Removing Fuel Sack.</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>6</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>BRK_FuelSack</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+</Defs>
